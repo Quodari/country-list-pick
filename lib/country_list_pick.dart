@@ -41,7 +41,7 @@ class CountryListPick extends StatefulWidget {
     language == 'nederlands'? countriesDutch:
     language == 'polish'? countriesPolish:
     language == 'spanish'? countriesSpanish:
-    language == 'ukranian'? countriesUkranian:
+    language == 'ukranian'? countriesUkrainian:
     language == 'german'? countriesGerman:
         this.theme?.showEnglishName ?? true ? countriesEnglish : codes;
 
