@@ -38,10 +38,11 @@ class CountryListPick extends StatefulWidget {
   _CountryListPickState createState() {
     List<Map> jsonList = language == 'english'? countriesEnglish:
     language == 'french'? countriesFrench:
-    language == 'dutch'? countriesDutch:
+    language == 'nederlands'? countriesDutch:
     language == 'polish'? countriesPolish:
     language == 'spanish'? countriesSpanish:
     language == 'ukranian'? countriesUkranian:
+    language == 'german'? countriesGerman:
         this.theme?.showEnglishName ?? true ? countriesEnglish : codes;
 
     List elements = jsonList
