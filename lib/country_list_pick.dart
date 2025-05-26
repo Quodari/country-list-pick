@@ -20,7 +20,7 @@ class CountryListPick extends StatefulWidget {
       this.countryBuilder,
       this.theme,
       this.useUiOverlay = true,
-      this.useSafeArea = false});
+      this.useSafeArea = false, this.language});
 
   final String? initialSelection;
   final ValueChanged<CountryCode?>? onChanged;
@@ -32,10 +32,16 @@ class CountryListPick extends StatefulWidget {
       countryBuilder;
   final bool useUiOverlay;
   final bool useSafeArea;
+  final String? language;
 
   @override
   _CountryListPickState createState() {
-    List<Map> jsonList =
+    List<Map> jsonList = language == 'english'? countriesEnglish:
+    language == 'french'? countriesFrench:
+    language == 'dutch'? countriesDutch:
+    language == 'polish'? countriesPolish:
+    language == 'spanish'? countriesSpanish:
+    language == 'ukranian'? countriesUkranian:
         this.theme?.showEnglishName ?? true ? countriesEnglish : codes;
 
     List elements = jsonList
